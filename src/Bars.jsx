@@ -6,8 +6,8 @@ const Bars = () => {
   let confirmedData = [];
   let area =[];
   let color=[];
-  axios //https://thingproxy.freeboard.io/fetch/
-    .get("https://thingproxy.freeboard.io/fetch/https://covid19bangladesh.pythonanywhere.com/dhaka")
+  axios
+    .get("/dhaka")
     .then(res => {
       for(let item of res.data){
         confirmedData.push(parseInt(item.confirmed));
